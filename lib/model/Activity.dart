@@ -5,7 +5,7 @@ class Activity {
   int price;
   String link;
   String key;
-  int accessibility;
+  double accessibility;
 
   Activity({
     required this.activity,
