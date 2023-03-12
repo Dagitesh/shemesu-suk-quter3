@@ -20,7 +20,6 @@ class _ActivitiesState extends State<Activities> {
         title: const Text('Shemsu Suk'),
         foregroundColor: Color.fromARGB(255, 255, 253, 253),
         backgroundColor: Color.fromARGB(255, 59, 58, 58),
-        actions: [Icon(Icons.account_box)],
       ),
       body: BlocBuilder<activityBloc, ActivityState>(
         builder: (context, state) {

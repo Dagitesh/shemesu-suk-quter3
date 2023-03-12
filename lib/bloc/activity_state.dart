@@ -16,7 +16,13 @@ class ActivityLoadingState extends ActivityState {}
 
 class ActivitySuccess extends ActivityState {
   final List grocery;
-  const ActivitySuccess(Activity activity, {required this.grocery});
+  List purchase_History;
+
+  ActivitySuccess(this.grocery, this.purchase_History, {required Activity});
 }
 
-class ActivityFailState extends ActivityState {}
+class ActivityFailState extends ActivityState {
+  String message;
+
+  ActivityFailState(this.message);
+}
