@@ -1,11 +1,11 @@
 class Activity {
   String activity;
   String type;
-  int participants;
-  int price;
+  String participants;
+  String price;
   String link;
   String key;
-  double accessibility;
+  String accessibility;
 
   Activity({
     required this.activity,
@@ -21,11 +21,11 @@ class Activity {
     return Activity(
       activity: parsedJson['activity'],
       type: parsedJson['type'],
-      participants: parsedJson['participants'],
-      price: parsedJson['price'],
+      participants: parsedJson['participants'].toString(),
+      price: parsedJson['price'].toString(),
       link: parsedJson['link'],
       key: parsedJson['key'],
-      accessibility: parsedJson['accessibility'],
+      accessibility: parsedJson['accessibility'].toString(),
     );
   }
 }
