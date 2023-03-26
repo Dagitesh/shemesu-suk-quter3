@@ -1,28 +1,40 @@
-import 'package:bloc_implement/model/Activity.dart';
-import 'package:equatable/equatable.dart';
+import 'package:equatable/Equatable.dart';
+import 'package:shemsu_suk/model/item.dart';
 
-import 'package:equatable/equatable.dart';
+abstract class itemState extends Equatable {}
 
-abstract class ActivityState extends Equatable {
-  const ActivityState();
-
+class itemInitialState extends itemState {
   @override
+  // TODO: implement props
   List<Object> get props => [];
 }
 
-class TestInitialState extends ActivityState {}
-
-class ActivityLoadingState extends ActivityState {}
-
-class ActivitySuccess extends ActivityState {
-  final List grocery;
-  List purchase_History;
-
-  ActivitySuccess(this.grocery, this.purchase_History, {required Activity});
+class itemLoadingState extends itemState {
+  @override
+  // TODO: implement props
+  List<Object> get props => [];
 }
 
-class ActivityFailState extends ActivityState {
+class itemSuccessState extends itemState {
+  final List activity;
+  List purchaseHistory;
+
+  itemSuccessState(
+    this.activity,
+    this.purchaseHistory,
+  );
+
+  @override
+  // TODO: implement props
+  List<Object> get props => [];
+}
+
+class itemFailState extends itemState {
   String message;
 
-  ActivityFailState(this.message);
+  itemFailState(this.message);
+
+  @override
+  // TODO: implement props
+  List<Object> get props => [];
 }

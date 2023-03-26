@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "bloc_implement" "\0"
+            VALUE "FileDescription", "shemsu_suk" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "bloc_implement" "\0"
+            VALUE "InternalName", "shemsu_suk" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "bloc_implement.exe" "\0"
-            VALUE "ProductName", "bloc_implement" "\0"
+            VALUE "OriginalFilename", "shemsu_suk.exe" "\0"
+            VALUE "ProductName", "shemsu_suk" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

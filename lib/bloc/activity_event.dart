@@ -1,19 +1,62 @@
-import 'package:bloc_implement/model/Activity.dart';
 import 'package:equatable/equatable.dart';
+import 'package:shemsu_suk/model/item.dart';
 
-abstract class ActivityEvent extends Equatable {}
+abstract class itemEvent extends Equatable {
+  const itemEvent();
 
-class GetDataButtonPressed extends ActivityEvent {
   @override
   List<Object> get props => [];
 }
 
-class PurchaseHistoryEvent extends ActivityEvent {
-  final Activity grocery;
-  PurchaseHistoryEvent({required this.grocery});
+class GetDataButtonPressed extends itemEvent {
+  const GetDataButtonPressed();
+  @override
+  List<Object> get props => [];
+}
+
+class PurchaseHistoryEvent extends itemEvent {
+  final item asbeza;
+  const PurchaseHistoryEvent({required this.asbeza});
 
   @override
   List<Object> get props => [];
 
-  get data => grocery;
+  get data => asbeza;
+}
+
+class incrementalEve extends itemEvent {
+  final int input;
+  const incrementalEve(
+    this.input,
+  );
+
+  @override
+  List<Object> get props => [];
+
+  get data => input;
+}
+
+class decrementalEve extends itemEvent {
+  final int input;
+  decrementalEve(
+    this.input,
+  );
+
+  @override
+  List<Object> get props => [];
+
+  get data => input;
+}
+
+class RemoveEve extends itemEvent {
+  final int input;
+  RemoveEve(
+    this.input,
+  );
+
+
+  @override
+  List<Object> get props => [];
+
+  get data => input;
 }

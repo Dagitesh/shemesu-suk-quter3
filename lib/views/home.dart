@@ -23,22 +23,7 @@ class _ActivitiesState extends State<Activities> {
       ),
       body: BlocBuilder<activityBloc, ActivityState>(
         builder: (context, state) {
-          if (state is TestInitialState) {
-            return Center(
-              child: ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 83, 83, 52),
-                    minimumSize: const Size(200, 50),
-                    alignment: Alignment.center,
-                    elevation: 10),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/second');
-                },
-                icon: const Icon(Icons.house),
-                label: const Text(" Shop Now!"),
-              ),
-            );
-          }
+        BlocProvider.of<itemBloc>(context).add(GetDataButtonPressed());
           if (state is ActivityLoadingState) {
             return const Center(
               child: CircularProgressIndicator(),
