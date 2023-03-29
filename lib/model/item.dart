@@ -7,8 +7,7 @@ class item {
   String category;
   String image;
   bool available;
-  // String rating;
-  // num count;
+  
 
   item({
     required this.id,
@@ -19,8 +18,7 @@ class item {
     required this.category,
     required this.image,
     required this.available,
-    // required this.rating,
-    // required this.count
+   
   });
 
   factory item.fromjson(Map<String, dynamic> parsedjson) {
