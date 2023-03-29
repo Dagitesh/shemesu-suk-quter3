@@ -31,7 +31,8 @@ class _main_pageState extends State<main_page> {
         ],
       ),
       backgroundColor: Color.fromARGB(255, 59, 57, 57),
-      body: ListView.builder(
+      body: 
+      ListView.builder(
         itemCount: 3,
         itemBuilder: (BuildContext context, int index) {
           return Padding(
