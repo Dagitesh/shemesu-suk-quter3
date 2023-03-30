@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:bloc_implement/model/Activity.dart';
 import 'package:http/http.dart' as http;
-import 'package:bloc_implement/model/Activity.dart';
+
+import '../model/Activity.dart';
 
 class ApiServiceProvider {
   Future<List?> fetchActivity() async {

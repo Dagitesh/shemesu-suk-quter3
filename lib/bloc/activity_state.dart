@@ -1,9 +1,12 @@
 import 'package:equatable/Equatable.dart';
 import 'package:shemsu_suk/model/item.dart';
 
-abstract class itemState extends Equatable {}
-
+abstract class itemState extends Equatable {
+   const itemState();
+}
+ 
 class itemInitialState extends itemState {
+  
   @override
   // TODO: implement props
   List<Object> get props => [];
@@ -14,6 +17,7 @@ class itemLoadingState extends itemState {
   // TODO: implement props
   List<Object> get props => [];
 }
+
 
 class itemSuccessState extends itemState {
   final List activity;

@@ -26,20 +26,38 @@ class item {
       id: parsedjson['id'],
       title: parsedjson['title'],
       price: parsedjson['price'],
-      counter: 1,
-      available: false,
+      counter: parsedjson['counter'],
+      available: parsedjson['itemsadded'],
       description: parsedjson['description'],
       category: parsedjson['category'],
       image: parsedjson['image'],
-      // rating: parsedjson['rating'],
-      // count: parsedjson['count'],
+      
     );
+  }
+  toJson() {
+    Map<String, dynamic> json = {};
+    json['id'] = id;
+    json['title'] = title;
+    json['description'] = description;
+    json['price'] = price;
+    json['image'] = image;
+    json['counter'] = counter;
+    json['availabe'] = available;
+    return json;
   }
 
   static List asbezaList(List asbeza) {
     List asbezas = [];
     for (var i = 0; i < asbeza.length; i++) {
       asbezas.add(item.fromjson(asbeza[i]));
+    }
+    return asbezas;
+  }
+
+  static List historyList(List asbeza) {
+    List asbezas = [];
+    for (var i = 0; i < asbezas.length; i++) {
+      asbeza.add(item.fromjson(asbeza[i]));
     }
     return asbezas;
   }

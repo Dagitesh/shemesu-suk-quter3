@@ -3,6 +3,3 @@
 import 'package:equatable/equatable.dart';
 import 'package:shemsu_suk/model/item.dart';
 
-class cartmod{
-  final 
-}

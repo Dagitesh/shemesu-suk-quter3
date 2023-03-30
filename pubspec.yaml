@@ -46,6 +46,7 @@ dependencies:
   contacts_service: ^0.6.3
   mobile_number: ^2.1.1
   sqflite: ^2.2.6
+  path_provider: ^2.0.14
 
 dev_dependencies:
   flutter_test:
