@@ -4,10 +4,9 @@ class item {
   num price;
   int counter;
   String description;
-  String category;
+
   String image;
-  bool available;
-  
+  int available;
 
   item({
     required this.id,
@@ -15,10 +14,8 @@ class item {
     required this.price,
     required this.description,
     required this.counter,
-    required this.category,
     required this.image,
     required this.available,
-   
   });
 
   factory item.fromjson(Map<String, dynamic> parsedjson) {
@@ -26,12 +23,21 @@ class item {
       id: parsedjson['id'],
       title: parsedjson['title'],
       price: parsedjson['price'],
-      counter: parsedjson['counter'],
-      available: parsedjson['itemsadded'],
+      counter: 1,
+      available: 0,
       description: parsedjson['description'],
-      category: parsedjson['category'],
       image: parsedjson['image'],
-      
+    );
+  }
+  factory item.historyfromJson(Map<String, dynamic> parsedJson) {
+    return item(
+      id: parsedJson['id'],
+      title: parsedJson['title'],
+      price: parsedJson['price'],
+      description: parsedJson['description'],
+      counter: parsedJson['counter'],
+      image: parsedJson['image'],
+      available: parsedJson['available'],
     );
   }
   toJson() {
@@ -42,7 +48,7 @@ class item {
     json['price'] = price;
     json['image'] = image;
     json['counter'] = counter;
-    json['availabe'] = available;
+    json['available'] = available;
     return json;
   }
 
@@ -56,8 +62,8 @@ class item {
 
   static List historyList(List asbeza) {
     List asbezas = [];
-    for (var i = 0; i < asbezas.length; i++) {
-      asbeza.add(item.fromjson(asbeza[i]));
+    for (var i = 0; i < asbeza.length; i++) {
+      asbezas.add(item.historyfromJson(asbeza[i]));
     }
     return asbezas;
   }

@@ -14,7 +14,7 @@ class itemInitialState extends itemState {
 
 class itemLoadingState extends itemState {
   @override
-  // TODO: implement props
+  
   List<Object> get props => [];
 }
 

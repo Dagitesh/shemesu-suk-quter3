@@ -13,6 +13,6 @@ class Connection {
 
   _onCreatingDatabase(Database database, int version) async {
     await database.execute(
-        "CREATE TABLE groceries(id INTEGER PRIMARY KEY ,title TEXT,description TEXT,price INTEGER,image TEXT, counter INTEGER, availabel INTEGER)");
+        "CREATE TABLE asbeza(id INTEGER PRIMARY KEY ,title TEXT,description TEXT,price INTEGER,image TEXT, counter INTEGER, available INTEGER)");
   }
 }

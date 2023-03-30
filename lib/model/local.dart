@@ -39,8 +39,8 @@ class Repository {
   updateData(table, data) async {
     var connection = await database;
     return await connection
-        .rawUpdate('UPDATE $table SET quantity = ? WHERE id = ?', [
-      data['quantity'],
+        .rawUpdate('UPDATE $table SET counter = ? WHERE id = ?', [
+      data['counter'],
       data['id'],
     ]);
   }
